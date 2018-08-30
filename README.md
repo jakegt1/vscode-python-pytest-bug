@@ -6,8 +6,9 @@ To cause the bug, attempt via pytest configuration in VSCode to run the tests of
 
 
 ## Option 1
+Ignore project-b - causes all project-a tests to be run when running a singular test method (plus the chosen test method is run a second time)
+
 ```json
-// Ignore project-b - causes all project-a tests to be run when running a singular test method (plus the chosen test method is run a second time)
 {
     "python.unitTest.pyTestArgs": [
         ".",
@@ -16,8 +17,9 @@ To cause the bug, attempt via pytest configuration in VSCode to run the tests of
 }
 ```
 
+## Option 2
+Only run project-a. Path resolution is wrong (like project_a/tests/test_all.py, should be project-a/project_a/tests/test_all.py to work), so running single test method doens't work at all
 ```json
-// Only run project-a. Path resolution is wrong (like project_a/tests/test_all.py, should be project-a/project_a/tests/test_all.py to work), so running single test method doens't work at all
 {
     "python.unitTest.pyTestArgs": [
         "project-a"
