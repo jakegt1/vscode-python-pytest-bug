@@ -1,0 +1,11 @@
+{
+    "python.unitTest.pyTestArgs": [
+        ".",
+        "--ignore=project-b"
+    ]
+    /*
+    "python.unitTest.pyTestArgs": [
+        "project-a"
+    ]
+    */
+}
