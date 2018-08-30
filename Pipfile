@@ -10,3 +10,5 @@ python_version = "3.5"
 
 [packages]
 pytest = "==3.6"
+project-a = {path = "./project-a", editable = true}
+project-b = {editable = true, path = "./project-b"}
